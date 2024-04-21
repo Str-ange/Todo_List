@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+:root {
+  --form-control-color: #ca8bfe;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-color {
+  background-color: #a18aff !important;
+}
+.secondary-color {
+  color: var(--form-control-color) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-card {
+  max-width: 300px;
+  background-image: url("https://static8.depositphotos.com/1003924/908/i/450/depositphotos_9082926-stock-photo-blank-paper-note-on-wood.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 125%;
+}
+.todo-input {
+  border: none;
+  outline: none;
+  width: 80%;
+  margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.selected-todo {
+  background-color: lightgray !important;
+}
+.complete-check {
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+.complete-check + .complete-check {
+  margin-top: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  margin-top: 4px;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid var(--form-control-color);
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+input[type="radio"]:checked {
+  cursor: default;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: CanvasText;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
 }
