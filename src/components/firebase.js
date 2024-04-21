@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAh2DfAwc_XXbeKUbspZsGaDN0RWX-WeIg",
-  authDomain: "todo-list-420915.firebaseapp.com",
-  projectId: "todo-list-420915",
-  storageBucket: "todo-list-420915.appspot.com",
-  messagingSenderId: "695164963509",
-  appId: "1:695164963509:web:11a16dc08bb23ea2cf0cfc",
-  measurementId: "G-2QJMN8GEM7",
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+  measurementId: "YOUR_MEASUREMENT_ID",
 };
 
 const app = initializeApp(firebaseConfig);
