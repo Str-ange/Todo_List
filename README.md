@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Todo List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Todo List application built with React and Firebase.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Features](#features)
+4. [Google Login](#google-login)
+5. [Contributing](#contributing)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the Todo List app locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/your-username/todo-list.git
+   ```
+   
+2. Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ```bash
+  cd todo-list
+  npm install
+  ```
 
-### `npm run build`
+3. Set up Firebase:
+   
+  - Create a Firebase project on the [Firebase Console](https://console.firebase.google.com/).
+  - Set up Firebase Authentication and Firestore database.
+  - Copy your Firebase config and update the Firebase initialization file (firebase.js).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Run the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ```bash
+  npm start
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+Once the app is running, you can:
+  - Login using Google Account
+  - Add new tasks to the todo list.
+  - Mark tasks as completed.
+  - View the list of tasks.
+    
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - Google Login: Login using your google account.
+  - Add tasks: Enter a task and press Enter to add it to the list.
+  - Mark tasks as complete: Click on a complete buttom to mark it as complete.
+  - Edit tasks: Click on a task to edit it.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Google Login
+You can enable Google login for the Todo List app to allow users to sign in with their Google accounts. Follow these steps to set up Google login:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  1. Installing OAuth to add Google login to your React app
+  
+  - Install [@react-oauth/google](https://www.npmjs.com/package/@react-oauth/google) package.
+    
+  2. Acquiring a Google client ID for your project
+     
+  - Get a client ID from Google, go to [Google Cloud Console](https://console.cloud.google.com/).
+  - For more details check [Setting up OAuth 2.0](https://support.google.com/cloud/answer/6158849?hl=en).
+    
+  3. Integrating Google OAuth in React components
+  4. Create user profile based on the user’s Google profile
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
 
-## Learn More
+Contributions are welcome! If you'd like to contribute to the Todo List app, please follow these guidelines:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  1. Fork the repository.
+  2. Create a new branch: git checkout -b feature-new-feature.
+  3. Commit your changes: git commit -am 'Add new feature'.
+  4. Push to the branch: git push origin feature-new-feature.
+  5. Submit a pull request.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
