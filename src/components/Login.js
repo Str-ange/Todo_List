@@ -11,7 +11,7 @@ function Login({ onSuccess, onFailure }) {
             <div className="col-12 p-0 text-center pt-5" style={{fontSize: "0.8rem"}}>Login with google to continue</div>
             <div className="col-12 p-0 d-flex pb-4 justify-content-center mb-2">
               <GoogleLogin
-                clientId="YOUR-CLIENT-ID"
+                clientId="YOUR_CLIENT_ID"
                 buttonText="Login with Google"
                 onSuccess={onSuccess}
                 onFailure={onFailure}
